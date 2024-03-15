@@ -1,0 +1,109 @@
+version: "3.1"
+
+intents:
+  - greet
+  - ask_for_help
+  - provide_dates
+  - provide_places
+  - choose_offer
+  - choose_transport
+  - choose_accommodation
+  - choose_plans
+  - seek_restaurant_suggestions
+  - seek_authentic_food
+  - seek_museum_recommendations
+  - affirm
+  - deny
+  - goodbye
+
+actions:
+  - action_process_travel_details
+  - validate_travel_form
+  - travel_form
+  - action_search_flights
+  - action_handle_follow_up
+  - action_recommendation
+
+responses:
+  utter_greet:
+  - text: "Hello! How can I assist you today?"
+#    - text: "Hi there! Ready for some travel planning?"
+#    - text: "Greetings! What brings you here today?"
+#    - text: "Good to see you! How may I help you with your journey?"
+#    - text: "Hi, traveler! What can I assist you with?"
+
+  utter_offer_help:
+  - text: "Sure, I'm here to help. What can I assist you with?"
+#    - text: "Need assistance planning your trip? I'm here for you."
+#    - text: "Looking to embark on a journey? Let me assist you."
+#    - text: "Ready to help you with your travel arrangements."
+#    - text: "How may I assist you on your upcoming adventure?"
+
+  utter_ask_dates:
+  - text: "When are you planning to depart and return?"
+#    - text: "Dates are crucial for a seamless journey. When do you plan to leave and return?"
+#    - text: "To provide the best assistance, could you share your departure and return dates?"
+#    - text: "Let's talk dates! When are you starting and finishing your trip?"
+#    - text: "Your journey's success begins with the right dates. When do you plan to depart and return?"
+
+  utter_ask_places:
+  - text: "What are your departure and destination locations?"
+#    - text: "To assist you better, I need to know where you're starting and where you're headed. What are your departure and destination locations?"
+#    - text: "Specify your starting point and destination, please."
+#    - text: "Tell me the locations you're traveling between."
+#    - text: "For a smooth travel plan, share your departure and destination details."
+
+  utter_offer_choices:
+  - text: "How may I assist you today? Transport, accommodation, or planning?"
+#    - text: "Ready to help with transport, accommodation, or planning your days. What's your choice?"
+#    - text: "What aspect do you want assistance with? Transport, accommodation, or planning?"
+#    - text: "Choose your focus: Transport, accommodation, or planning your days?"
+#    - text: "Ready to assist. Are you looking for help with transport, accommodation, or planning?"
+
+  utter_choose_transport:
+  - text: "Considering transport options. Bus, train, or flight?"
+#    - text: "Time to choose your mode of transport. Bus, train, or flight?"
+#    - text: "Ready to book transport. Bus, train, or flight?"
+#    - text: "Transport options available: Bus, train, or flight?"
+#    - text: "Choose your preferred transport: Bus, train, or flight?"
+#    - text: "Exploring the world by land or air? Choose from bus, train, or flight for your journey."
+
+  utter_choose_accommodation:
+  - text: "Accommodation choices available: Hostels, hotels, or Airbnb. What's your preference?"
+#    - text: "Ready to book accommodation. Options include hostels, hotels, or Airbnb."
+#    - text: "Considering accommodation. Hostels, hotels, or Airbnb? Your choice."
+#    - text: "Accommodation preferences: Hostels, hotels, or Airbnb?"
+#    - text: "Choose your accommodation type: Hostels, hotels, or Airbnb?"
+#    - text: "A good night's rest matters. Select from hostels, hotels, or Airbnb for your stay."
+
+  utter_choose_plans:
+  - text: "Planning your days. Interested in food, attractions, bars, or museums?"
+#    - text: "Ready to help plan your days. Options include food, attractions, bars, or museums."
+#    - text: "Considering your day plans. Food, attractions, bars, or museums? Your choice."
+#    - text: "Day planning options: Food, attractions, bars, or museums."
+#    - text: "Choose your focus for the day: Food, attractions, bars, or museums?"
+#    - text: "Crafting your itinerary? Let me know your preferences: food, attractions, bars, or museums."
+
+  utter_goodbye:
+  - text: "Thank you for considering my assistance. Have a fantastic journey!"
+#    - text: "Safe travels! If you need further assistance, feel free to return."
+#    - text: "Goodbye for now! Wishing you an amazing and memorable trip."
+#    - text: "If you have more questions, don't hesitate to ask. Bon voyage!"
+#    - text: "Farewell! May your travels be filled with joy and discovery."
+
+
+slots:
+  date:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: date
+  location:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: location
+
+session_config:
+  session_expiration_time: 120
+  carry_over_slots_to_new_session: true

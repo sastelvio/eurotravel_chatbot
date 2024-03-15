@@ -1,0 +1,111 @@
+version: "3.1"
+
+stories:
+
+# Story 1: Greet, Ask for Help, Provide Dates, Choose Places, Choose Transport
+- story: story 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_for_help
+  - action: utter_offer_help
+  - intent: provide_dates
+  - action: utter_ask_dates
+  - intent: provide_places
+  - action: utter_ask_places
+  - intent: choose_transport
+  - action: utter_choose_transport
+
+# Story 2: Greet, Ask for Help, Provide Dates, Choose Places, Choose Accommodation
+- story: story 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_for_help
+  - action: utter_offer_help
+  - intent: provide_dates
+  - action: utter_ask_dates
+  - intent: provide_places
+  - action: utter_ask_places
+  - intent: choose_accommodation
+  - action: utter_choose_accommodation
+
+# Story 3: Greet, Ask for Help, Provide Dates, Choose Places, Plan Days
+- story: story 3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_for_help
+  - action: utter_offer_help
+  - intent: provide_dates
+  - action: utter_ask_dates
+  - intent: provide_places
+  - action: utter_ask_places
+  - intent: choose_plans
+  - action: utter_choose_plans
+
+# Story 4: Greet, Ask for Help, Provide Dates, Choose Places, Plan Days, Goodbye
+- story: story 4
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_for_help
+  - action: utter_offer_help
+  - intent: provide_dates
+  - action: utter_ask_dates
+  - intent: provide_places
+  - action: utter_ask_places
+  - intent: choose_plans
+  - action: utter_choose_plans
+  - intent: goodbye
+  - action: utter_goodbye
+
+# Story 5: Greet, Ask for Help, Goodbye
+- story: story 5
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_for_help
+  - action: utter_offer_help
+  - intent: goodbye
+  - action: utter_goodbye
+
+# Story 6: Process travel details
+- story: Process travel details
+  steps:
+  - intent: provide_dates
+  - action: action_process_travel_details
+  - intent: provide_places
+  - action: action_process_travel_details
+
+# Story 7: Change travel dates
+- story: Change travel dates
+  steps:
+  - intent: provide_dates
+  - action: action_process_travel_details
+  - intent: provide_dates
+  - action: action_process_travel_details
+
+# Story 8: Update destination
+- story: Update destination
+  steps:
+  - intent: provide_places
+  - action: action_process_travel_details
+  - intent: provide_places
+  - action: action_process_travel_details
+
+# Story 9: Ask for recommendations
+- story: Ask for recommendations
+  steps:
+  - intent: provide_places
+  - action: action_process_travel_details
+
+# Story 10: Collect travel details
+- story: Collect travel details
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: provide_dates
+  - action: travel_form
+  - intent: provide_places
+  - action: travel_form

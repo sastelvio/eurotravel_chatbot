@@ -1,0 +1,188 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - Hello
+    - Hi there
+    - Hey
+    - Good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - hi bot
+    - hi there, how are you?
+    - hey buddy
+    - hi, can you help me?
+    - hello, what's up?
+    - hi, is anyone there?
+    - hey, how's it going?
+    - hi, I need some assistance
+    - hello, can you assist me?
+
+- intent: ask_for_help
+  examples: |
+    - Can you help me with my travel plans?
+    - I need assistance for planning a trip
+    - Help me plan my journey
+    - Looking for guidance with travel arrangements
+    - Assistance needed for travel
+    - What services do you offer for travel planning?
+    - Tell me how you can assist with my trip
+    - Need your support in planning a journey
+    - I'm lost, can you assist with travel?
+
+- intent: provide_dates
+  examples: |
+    - My travel dates are from [2024-03-20](date) to [2024-03-25](date)
+    - I plan to depart on [2024-04-10](date) and return on [2024-04-15](date)
+    - Need help for travel on specific dates
+    - What should I consider for travel on certain dates?
+    - Dates: [2024-05-01](date) to [2024-05-10](date)
+    - I want to travel on [2024-06-01](date)
+    - Provide options for travel on specific dates
+    - Can you assist with travel on [2024-07-15](date)?
+    - Share details for travel on certain dates
+    - I'm available from [2024-08-20](date) to [2024-08-25](date)
+
+- intent: provide_places
+  examples: |
+    - Departing from [New York](location) to [Paris](location)
+    - Need info for travel from [London](location) to [Tokyo](location)
+    - Tell me about travel from [Sydney](location) to [Rome](location)
+    - I'm traveling between [Los Angeles](location) and [Miami](location)
+    - Destination: [Tokyo](location) from [London](location)
+    - Share details about travel from [Berlin](location) to [Barcelona](location)
+    - What's there to do in [Paris](location) during my trip?
+    - Best route from [Chicago](location) to [San Francisco](location)?
+    - Help plan a trip from [Toronto](location) to [Vancouver](location)
+    - Share insights about [Bali](location)
+
+- intent: choose_offer
+  examples: |
+    - What options do you provide for travel assistance?
+    - Tell me about the choices for travel services
+    - Interested in your travel offerings
+    - What can you help me with regarding my trip?
+    - Exploring services for travel planning
+    - Can you assist with transport, accommodation, or planning?
+    - What are the options for travel support?
+
+- intent: choose_transport
+  examples: |
+    - I want to take a bus
+    - Considering transport options. Bus is my preference.
+    - I want to book a train
+    - TGV
+    - Opting for bus as my mode of transport
+    - I'll go with a train for my journey
+    - Bus, please
+    - I'm interested in taking a bus
+    - Choosing a flight
+    - Let's book a flight
+    - I prefer to travel by plane
+    - I'd like to fly to my destination
+
+- intent: choose_accommodation
+  examples: |
+    - I prefer booking an Airbnb
+    - Considering accommodation options. Airbnb is my choice.
+    - I want to stay in a hostel
+    - Opting for a hotel for my stay
+    - I'll go with an Airbnb for accommodation
+    - Hostel, please
+    - I'm interested in booking an Airbnb
+    - Choosing a hotel for my stay
+    - Let's book a hostel
+    - I'd like to stay in a hotel
+    - Airbnb accommodation
+    - Booking a hostel
+    - Hotel reservation
+
+- intent: choose_plans
+  examples: |
+    - I love having lunch in a restaurant
+    - I would like to go party
+    - I prefer visiting museums
+    - I'd like to go to parks
+    - I love having coffee
+    - I prefer going for dinner
+    - I'd love to visit a museum and then have lunch
+    - I would like to explore historical places and then go for dinner
+    - I prefer starting the day with a visit to a park and then having coffee
+    - I'd like to check out a bar and then go to a museum
+
+- intent: seek_restaurant_suggestions
+  examples: |
+    - Give me restaurant suggestions
+    - Where can I find good places to eat?
+    - Suggest some restaurants
+    - What are the best places for dinner?
+    - Any recommendations for authentic local food?
+    - I'm looking for a nice place to have lunch
+    - Can you suggest restaurants with vegetarian options?
+
+- intent: seek_authentic_food
+  examples: |
+    - Recommendations for authentic local food
+    - Where can I try local cuisine?
+    - I want to taste traditional dishes
+    - Suggest some places for authentic food
+    - What are the must-try dishes in this area?
+    - Any local specialties I should try?
+    - Where can I find the best street food?
+
+- intent: seek_museum_recommendations
+  examples: |
+    - What museums should I visit here?
+    - Suggest some interesting museums
+    - Any recommendations for historical places?
+    - Where can I explore art and culture?
+    - Tell me about popular museums in the area
+    - I want to learn about the local history
+    - Are there any famous landmarks or museums?
+
+- intent: affirm
+  examples: |
+    - Yes
+    - Indeed
+    - Absolutely
+    - Certainly
+    - Sure
+    - Of course
+    - Yeah
+    - Definitely
+    - Absolutely right
+    - I agree
+
+- intent: deny
+  examples: |
+    - No
+    - Nope
+    - Not at all
+    - Certainly not
+    - I don't think so
+    - No way
+    - I disagree
+    - Nah
+    - I'm not sure about that
+    - Negative
+
+- intent: goodbye
+  examples: |
+    - Thank you, goodbye!
+    - I'm done, farewell
+    - Goodbye for now
+    - See you later
+    - End the conversation
+    - Farewell
+    - That's all, goodbye
+    - Time to leave
+    - Bye
+    - I'm saying goodbye
+
